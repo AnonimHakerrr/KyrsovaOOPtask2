@@ -36,9 +36,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(684, 12);
+            this.button1.Location = new System.Drawing.Point(513, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -46,18 +47,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(776, 12);
+            this.button2.Location = new System.Drawing.Point(582, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 1;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(583, 12);
+            this.button3.Location = new System.Drawing.Point(437, 10);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 2;
             this.button3.Text = "Show";
             this.button3.UseVisualStyleBackColor = true;
@@ -66,22 +69,24 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(25, 65);
+            this.listBox1.Location = new System.Drawing.Point(19, 53);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(836, 436);
+            this.listBox1.Size = new System.Drawing.Size(628, 355);
             this.listBox1.TabIndex = 3;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 514);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(655, 418);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

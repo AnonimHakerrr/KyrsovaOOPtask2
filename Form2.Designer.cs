@@ -30,32 +30,33 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Predmet = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Hours = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Rating = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Position = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.LastNameTheacher = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.DateProv = new System.Windows.Forms.DateTimePicker();
+            this.NameTheacher = new System.Windows.Forms.TextBox();
+            this.Nomer = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.LastNameStudent = new System.Windows.Forms.TextBox();
+            this.NameStudent = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 399);
+            this.button1.Location = new System.Drawing.Point(94, 324);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 39);
+            this.button1.Size = new System.Drawing.Size(70, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Додати";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,189 +65,211 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 33);
+            this.label1.Location = new System.Drawing.Point(22, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Предмет";
             // 
-            // textBox1
+            // Predmet
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
+            this.Predmet.Location = new System.Drawing.Point(24, 42);
+            this.Predmet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Predmet.Name = "Predmet";
+            this.Predmet.Size = new System.Drawing.Size(76, 20);
+            this.Predmet.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 33);
+            this.label2.Location = new System.Drawing.Point(117, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 16);
+            this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Дата проведення";
             // 
-            // textBox3
+            // Hours
             // 
-            this.textBox3.Location = new System.Drawing.Point(32, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 6;
+            this.Hours.Location = new System.Drawing.Point(24, 93);
+            this.Hours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Hours.Name = "Hours";
+            this.Hours.Size = new System.Drawing.Size(76, 20);
+            this.Hours.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 96);
+            this.label3.Location = new System.Drawing.Point(22, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 16);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Кількість годин";
             // 
-            // textBox4
+            // Rating
             // 
-            this.textBox4.Location = new System.Drawing.Point(155, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 8;
+            this.Rating.Location = new System.Drawing.Point(116, 93);
+            this.Rating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rating.Name = "Rating";
+            this.Rating.Size = new System.Drawing.Size(76, 20);
+            this.Rating.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(156, 96);
+            this.label4.Location = new System.Drawing.Point(117, 78);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Оцінка";
             // 
-            // textBox5
+            // Position
             // 
-            this.textBox5.Location = new System.Drawing.Point(33, 186);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 10;
+            this.Position.Location = new System.Drawing.Point(25, 151);
+            this.Position.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Position.Name = "Position";
+            this.Position.Size = new System.Drawing.Size(76, 20);
+            this.Position.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 168);
+            this.label5.Location = new System.Drawing.Point(22, 136);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Посада";
             // 
-            // textBox6
+            // LastNameTheacher
             // 
-            this.textBox6.Location = new System.Drawing.Point(33, 242);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 22);
-            this.textBox6.TabIndex = 12;
+            this.LastNameTheacher.Location = new System.Drawing.Point(25, 197);
+            this.LastNameTheacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastNameTheacher.Name = "LastNameTheacher";
+            this.LastNameTheacher.Size = new System.Drawing.Size(104, 20);
+            this.LastNameTheacher.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 223);
+            this.label6.Location = new System.Drawing.Point(22, 181);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 16);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Прізвище";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(174, 223);
+            this.label8.Location = new System.Drawing.Point(130, 181);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 16);
+            this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Ім\'я";
             // 
-            // dateTimePicker1
+            // DateProv
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 52);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 20;
+            this.DateProv.Location = new System.Drawing.Point(116, 42);
+            this.DateProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateProv.Name = "DateProv";
+            this.DateProv.Size = new System.Drawing.Size(151, 20);
+            this.DateProv.TabIndex = 20;
             // 
-            // textBox2
+            // NameTheacher
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 242);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 22);
-            this.textBox2.TabIndex = 21;
+            this.NameTheacher.Location = new System.Drawing.Point(133, 197);
+            this.NameTheacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameTheacher.Name = "NameTheacher";
+            this.NameTheacher.Size = new System.Drawing.Size(104, 20);
+            this.NameTheacher.TabIndex = 21;
             // 
-            // textBox8
+            // Nomer
             // 
-            this.textBox8.Location = new System.Drawing.Point(32, 299);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 23;
+            this.Nomer.Location = new System.Drawing.Point(24, 243);
+            this.Nomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Nomer.Name = "Nomer";
+            this.Nomer.Size = new System.Drawing.Size(76, 20);
+            this.Nomer.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 280);
+            this.label10.Location = new System.Drawing.Point(22, 228);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 16);
+            this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 22;
             this.label10.Text = "Номер групи";
             // 
-            // textBox7
+            // LastNameStudent
             // 
-            this.textBox7.Location = new System.Drawing.Point(33, 359);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(138, 22);
-            this.textBox7.TabIndex = 24;
+            this.LastNameStudent.Location = new System.Drawing.Point(25, 292);
+            this.LastNameStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastNameStudent.Name = "LastNameStudent";
+            this.LastNameStudent.Size = new System.Drawing.Size(104, 20);
+            this.LastNameStudent.TabIndex = 24;
             // 
-            // textBox9
+            // NameStudent
             // 
-            this.textBox9.Location = new System.Drawing.Point(177, 359);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(138, 22);
-            this.textBox9.TabIndex = 25;
+            this.NameStudent.Location = new System.Drawing.Point(133, 292);
+            this.NameStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameStudent.Name = "NameStudent";
+            this.NameStudent.Size = new System.Drawing.Size(104, 20);
+            this.NameStudent.TabIndex = 25;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(174, 340);
+            this.label11.Location = new System.Drawing.Point(130, 276);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 16);
+            this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 27;
             this.label11.Text = "Ім\'я";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(30, 340);
+            this.label12.Location = new System.Drawing.Point(22, 276);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 16);
+            this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 26;
             this.label12.Text = "Прізвище";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(275, 366);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.NameStudent);
+            this.Controls.Add(this.LastNameStudent);
+            this.Controls.Add(this.Nomer);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.NameTheacher);
+            this.Controls.Add(this.DateProv);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.LastNameTheacher);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.Position);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Rating);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Hours);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Predmet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -258,23 +281,23 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Predmet;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Hours;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Rating;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Position;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox LastNameTheacher;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DateTimePicker DateProv;
+        private System.Windows.Forms.TextBox NameTheacher;
+        private System.Windows.Forms.TextBox Nomer;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox LastNameStudent;
+        private System.Windows.Forms.TextBox NameStudent;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
     }
