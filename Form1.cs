@@ -34,12 +34,31 @@ namespace KyrsovaOOPtask2
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            listBox1.Items.Clear(); 
+            foreach (Exam exam in exams)
+            {
+                listBox1.Items.Add(exam.ToString());  
+            }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+
+        private void listBox1_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            string text = listBox1.Items[e.Index].ToString();
+            e.ItemHeight = (text.Split('\n').Length) * 15; 
+        }
+        private void listBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            e.DrawBackground();
+            
+            e.Graphics.DrawString(listBox1.Items[e.Index].ToString(),
+                e.Font, Brushes.Black, e.Bounds);
+            e.DrawFocusRectangle();
         }
     }
 }

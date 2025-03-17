@@ -29,7 +29,7 @@ namespace KyrsovaOOPtask2
         public override string ToString()
         {
             return "\nЕкзамен з "+nameExam + "\nДата проеведення :  " + 
-                   dateTime.Date.Day.ToString() + "\nВідведення кількість годин: " +
+                   dateTime.Date.DayOfWeek.ToString() + "\nВідведення кількість годин: " +
                    hours + "\nОцінка: " +
                    rating +
                    "\n" + thech.Show() +

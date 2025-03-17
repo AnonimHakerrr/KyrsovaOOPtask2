@@ -26,11 +26,11 @@ namespace KyrsovaOOPtask2
 
         public string ToString()
         {
-            return "Посада: " + position  ;
+            return "Посада: " + position +"\n" ;
         }
         public override string Show()
         {
-            return this.ToString() + base.Show();
+            return this.ToString() + base.ToString();
         }
     }
 }

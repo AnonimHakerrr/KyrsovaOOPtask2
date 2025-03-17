@@ -31,7 +31,7 @@ namespace KyrsovaOOPtask2
 
         public override string Show()
         { 
-           return  this.ToString()+base.Show();
+           return  this.ToString()+base.ToString();
         }
     }
 }
