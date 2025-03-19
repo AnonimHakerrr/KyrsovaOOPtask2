@@ -32,6 +32,6 @@ namespace KyrsovaOOPtask2
              
         }
 
-   
+      
     }
 }

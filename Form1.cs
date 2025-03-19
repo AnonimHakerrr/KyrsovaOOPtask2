@@ -64,6 +64,11 @@ namespace KyrsovaOOPtask2
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string text = comboBox1.SelectedItem.ToString();
+            sortListExam(text);
+
+        }
+        private void sortListExam(string text)
+        {
             switch (text)
             {
 
@@ -87,7 +92,6 @@ namespace KyrsovaOOPtask2
                     }
                     break;
             }
-
         }
         private void ShowFilterList(Exam[] examFilter)
         {
@@ -96,6 +100,13 @@ namespace KyrsovaOOPtask2
             {
                 listBox1.Items.Add(exam.ToString());
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string index =listBox1.SelectedItem.ToString();
+        
+
         }
     }
 }

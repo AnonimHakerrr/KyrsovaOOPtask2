@@ -28,7 +28,7 @@ namespace KyrsovaOOPtask2
         public Theacher GetTheacher() { return thech; }
         public override string ToString()
         {
-            return "\nЕкзамен з "+nameExam + "\nДата проеведення :  " + 
+            return "1\nЕкзамен з "+nameExam + "\nДата проеведення :  " + 
                    dateTime.Date.ToString() + "\nВідведення кількість годин: " +
                    hours + "\nОцінка: " +
                    rating +

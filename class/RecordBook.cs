@@ -27,6 +27,23 @@ namespace KyrsovaOOPtask2
                     this.exam[count] = exam;
                     count++;
                 }
+                else
+                {
+                    int newSize = this.exam.Length * 2;
+                    Exam[] newArray = new Exam[newSize];
+
+                     
+                    for (int i = 0; i < this.exam.Length; i++)
+                    {
+                        newArray[i] = this.exam[i];
+                    }
+ 
+                    this.exam = newArray;
+
+                     
+                    this.exam[count] = exam;
+                    count++;
+                }
             }
             catch (Exception ex)
             {
