@@ -60,5 +60,42 @@ namespace KyrsovaOOPtask2
                 e.Font, Brushes.Black, e.Bounds);
             e.DrawFocusRectangle();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string text = comboBox1.SelectedItem.ToString();
+            switch (text)
+            {
+
+                case "Theacher":
+                    {
+                        Exam[] sortedExams = exams.OrderBy(exam => exam.GetTheacher().GetLast()).ToArray();
+                        ShowFilterList(sortedExams);
+                        break;
+                    }
+                case "Grayd":
+                    {
+                        Exam[] sortedExams = exams.OrderBy(exam => exam.rating).ToArray();
+                        ShowFilterList(sortedExams);
+                        break;
+                    }
+                default:
+                    listBox1.Items.Clear();
+                    foreach (Exam exam in exams)
+                    {
+                        listBox1.Items.Add(exam.ToString());
+                    }
+                    break;
+            }
+
+        }
+        private void ShowFilterList(Exam[] examFilter)
+        {
+            listBox1.Items.Clear();
+            foreach (Exam exam in examFilter)
+            {
+                listBox1.Items.Add(exam.ToString());
+            }
+        }
     }
 }

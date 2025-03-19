@@ -25,11 +25,11 @@ namespace KyrsovaOOPtask2
             this.rating = rating;
             this.dateTime = dateTime;
         }
-      
+        public Theacher GetTheacher() { return thech; }
         public override string ToString()
         {
             return "\nЕкзамен з "+nameExam + "\nДата проеведення :  " + 
-                   dateTime.Date.DayOfWeek.ToString() + "\nВідведення кількість годин: " +
+                   dateTime.Date.ToString() + "\nВідведення кількість годин: " +
                    hours + "\nОцінка: " +
                    rating +
                    "\n" + thech.Show() +
