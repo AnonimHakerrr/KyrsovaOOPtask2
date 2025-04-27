@@ -39,7 +39,7 @@ namespace KyrsovaOOPtask2
             e.Font, Brushes.Black, e.Bounds);
             e.DrawFocusRectangle();
         }
-
+        // вивід студентів
         private void ShowStudentList()
         {
             listBox1.Items.Clear();
@@ -55,6 +55,7 @@ namespace KyrsovaOOPtask2
             isFilterActive = true;
             isfilterExamAtive = false;
         }
+        // вивід екзаменів студента
         private void ShowStudentExamsList(int index)
         {
             if (students[index].GetRecordbook().Count == 0)
@@ -94,7 +95,8 @@ namespace KyrsovaOOPtask2
             average /= students[index].GetRecordbook().Count;
             MessageBox.Show($"Середній бал студента \n{students[index].Show()} \n-> {average}");
         }
-
+        
+        // додавання студентів
         private void додаванняСтрудентаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddStud f = new AddStud();
@@ -113,7 +115,8 @@ namespace KyrsovaOOPtask2
             MessageBox.Show("Студента додано");
 
         }
-
+        
+        // додавання студентів  екзаменів
         private void додаванняЕкзаменуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -146,7 +149,8 @@ namespace KyrsovaOOPtask2
             students[listBox1.SelectedIndex].AddExam(exam);
             MessageBox.Show("Екзамен додано");
         }
-
+        
+        //вивід екзаменів студента
         private void вивідЕкзаменівСтрудентаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -165,15 +169,17 @@ namespace KyrsovaOOPtask2
                 MessageBox.Show($"Невідома помилка: {ex.Message}");
             }
         }
-
+        
+        // видалення студента
         private void DeleteCтудента(object sender, EventArgs e)
         {
             try
             {
                 int index = listBox1.SelectedIndex;
-                if (index <= 0 && listBox1.Items[index].ToString() == null)
+                if (index <= 0 || !isFilterActive)
                 {
                     throw new ArgumentOutOfRangeException();
+                    
                 }
                 DialogResult result = MessageBox.Show("Ви впевнені, що хочете видалити цього студента?", "Підтвердження", MessageBoxButtons.YesNo);
                 if (result != DialogResult.Yes) return;
@@ -190,16 +196,18 @@ namespace KyrsovaOOPtask2
                 MessageBox.Show($"Невідома помилка: {ex.Message}");
             }
         }
-
+        
+        // вивідд студентів використовуючи метод 
         private void вивідСтруденівToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowStudentList();
         }
-
+        
+        // видалення екзамену
         private void екзаменуСтудентаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int index = listBox1.SelectedIndex;
-            if (index < 0 && !isFilterActive)
+            if (index <= 0 || !isfilterExamAtive)
             {
                 MessageBox.Show("Екзамена не знайдено ( виберіть Екзамен ," +
                     " якщо ви не бачите екзаменів зайдіть в фільтр і виберіть пункт меню" +
@@ -221,7 +229,8 @@ namespace KyrsovaOOPtask2
             MessageBox.Show("Екзамен видалено");
             ShowStudentExamsList(indexStudent);
         }
-
+        
+        // сортування студентів по  середньому балу 
         private void середнійБалПоЕкзаменуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (students.Count == 0)
@@ -246,7 +255,8 @@ namespace KyrsovaOOPtask2
             isFilterActive = false;
             isfilterExamAtive = false;
         }
-
+        
+        // сортування студентів по оцінці екзамену
         private void сортуванняСтудентівПоОцінціЕкзаменToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!isFilterActive)
@@ -282,7 +292,8 @@ namespace KyrsovaOOPtask2
             isFilterActive = false;
             isfilterExamAtive = false;
         }
-
+        
+        // вивід студентів по екзамену
         private void вивідСтудентівПоЕкзаменуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!isFilterActive)
@@ -310,7 +321,8 @@ namespace KyrsovaOOPtask2
             isFilterActive = false;
               isfilterExamAtive = false;
         }
-
+        
+        // читання з файлу
         private void читанняЗФайлуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var lines = File.ReadAllLines(
@@ -331,7 +343,7 @@ namespace KyrsovaOOPtask2
                             Enum.TryParse(parts[i + 4], out TeacherPosition position);
                             Teacher tech = new Teacher(position, parts[i + 5], parts[i + 6]);
                             Exam exam = new Exam(tech, parts[i], int.Parse(parts[i + 2]), int.Parse(parts[i + 3]), DateTime.Parse(parts[i + 1]));
-                            if (!isValidStudExam(existingStudent, exam))
+                            if (isValidStudExam(existingStudent, exam))
                             {
                                 existingStudent.AddExam(exam);
                             }
@@ -357,19 +369,23 @@ namespace KyrsovaOOPtask2
             MessageBox.Show("Імпорт завершено!");
             isFileReader = true;
         }
-
+        
+        // валідаці порівняння студентів
         private bool isValidStud(Student st)
         {
             var existingStudent = students.FirstOrDefault(s => s.Equals(st));
             return existingStudent == null;
         }
+        
+        // валідація порівняння екзаменів 
         private bool isValidStudExam(Student st, Exam exam)
         {
             var recordbook = st.GetRecordbook();
             var existingExam = recordbook.FirstOrDefault(e => e.Equals(exam));
             return existingExam == null;
         }
-
+        
+        // запис в файл
         private void записВФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!isFileReader)
@@ -391,7 +407,8 @@ namespace KyrsovaOOPtask2
             File.WriteAllLines("C:\\Users\\oleks\\source\\repos\\KyrsovaOOPtask2\\ListStudentAndExam.txt", lines, Encoding.GetEncoding(1251));
             MessageBox.Show("Експорт завершено!");
         }
-
+        
+        //пошук студента
         private void пошукСтудентаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SeachStudent f = new SeachStudent();
@@ -416,17 +433,24 @@ namespace KyrsovaOOPtask2
             isFileReader = false;
             isfilterExamAtive = false;
         }
-
+        
+        // редагування оцінки за екзамен який вибраний 
         private void редагуваннняОцінкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!isfilterExamAtive)
+            {
+                MessageBox.Show("Виберіть екзамен ( Виберіть  Фільтр -> Вивід екзаменів студента )");
+                return;
+            }
             int index = listBox1.SelectedIndex;
-            if (index < 0 && !isFilterActive)
+            if (index <= 0)
             {
                 MessageBox.Show("Екзамена не знайдено ( виберіть Екзамен ," +
                     " якщо ви не бачите екзаменів зайдіть в фільтр і виберіть пункт меню" +
                     " під назвою Вивід екзаменів студента )");
                 return;
             }
+          
             int indexStudent = students.FindIndex(student => student.Show() == listBox1.Items[0].ToString());
             int examIndex = index - 1;
             var recordbook = students[indexStudent].GetRecordbook();
