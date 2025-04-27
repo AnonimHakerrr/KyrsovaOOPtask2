@@ -31,16 +31,11 @@ namespace KyrsovaOOPtask2
                 {
                     int newSize = this.exam.Length * 2;
                     Exam[] newArray = new Exam[newSize];
-
-                     
                     for (int i = 0; i < this.exam.Length; i++)
                     {
                         newArray[i] = this.exam[i];
                     }
- 
                     this.exam = newArray;
-
-                     
                     this.exam[count] = exam;
                     count++;
                 }
@@ -49,25 +44,33 @@ namespace KyrsovaOOPtask2
             {
                 Console.WriteLine(ex);
             }
-            
         }
-
         public void Delete(int index)
         {
             if (index < count)
             {
                 Exam[] tempExams = new Exam[count - 1];
+                int j = 0;
                 for (int i = 0; i < count; i++)
                 {
                     if (i != index)
                     {
-                        tempExams[i] = exam[i];
+                        tempExams[j++] = exam[i];
                     }
                 }
+                exam = tempExams;
             }
-
             count--;
-            }
+        }
+        public Exam[] Exams
+        {
+            get { return exam; }
+        }
+
+        public int Count
+        {
+            get { return count; }
+        }
         public IEnumerator<Exam> GetEnumerator()
         {
             for (int i = 0; i < count; i++)

@@ -8,52 +8,33 @@ namespace KyrsovaOOPtask2
 {
     public class Persone
     {
-       private string lastname,firstname;
+       private string _lastname,_firstname;
        public Persone(string lastname, string firstname)
        {
-           this.lastname = lastname;
-           this.firstname = firstname;
+           _lastname = lastname;
+           _firstname = firstname;
        }
        public Persone(Persone p)
        {
-           lastname = p.lastname;
-           firstname = p.firstname;
+           _lastname = p._lastname;
+           _firstname = p._firstname;
        }
         public void  SetPerson(string lastname, string firstname)
         {
-            this.firstname = firstname;
-            this.lastname = lastname;
+            this._firstname = firstname;
+            this._lastname = lastname;
         }
-
-        public string GetLast()
-        {
-            return lastname;
-        }
-
-        public string GetFirst()
-        {
-            return firstname;
-        }
+        public string lastName => _lastname;
+        public string firstName => _firstname;
         public override string ToString()
         {
-            return "Прізвище: " + lastname + ", Ім'я: " + firstname;
+            return $"\nПрізвище: { _lastname} , Ім'я: { _firstname}\n";
         }
       
         public virtual string   Show()
         { 
-            return   ToString();
+            return ToString();
         }
-        public void EnterName()
-        {
-            Console.Write("Введіть ім'я : ");
-            firstname = Console.ReadLine();
-
-            Console.Write("Введіть призвіще: ");
-            lastname = Console.ReadLine();
-        }
-
-      
-
     }
 
     

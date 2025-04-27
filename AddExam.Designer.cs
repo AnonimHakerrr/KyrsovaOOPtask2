@@ -1,6 +1,6 @@
 ﻿namespace KyrsovaOOPtask2
 {
-    partial class Form2
+    partial class AddExam
     {
         /// <summary>
         /// Required designer variable.
@@ -32,28 +32,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Predmet = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Hours = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Rating = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Position = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.LastNameTheacher = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.DateProv = new System.Windows.Forms.DateTimePicker();
             this.NameTheacher = new System.Windows.Forms.TextBox();
-            this.Nomer = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.LastNameStudent = new System.Windows.Forms.TextBox();
-            this.NameStudent = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Position = new System.Windows.Forms.ComboBox();
+            this.Rating = new System.Windows.Forms.NumericUpDown();
+            this.Hours = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.Rating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hours)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 399);
+            this.button1.Location = new System.Drawing.Point(114, 302);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 39);
@@ -88,14 +84,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Дата проведення";
             // 
-            // Hours
-            // 
-            this.Hours.Location = new System.Drawing.Point(32, 114);
-            this.Hours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Hours.Name = "Hours";
-            this.Hours.Size = new System.Drawing.Size(100, 22);
-            this.Hours.TabIndex = 6;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -105,14 +93,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Кількість годин";
             // 
-            // Rating
-            // 
-            this.Rating.Location = new System.Drawing.Point(155, 114);
-            this.Rating.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Rating.Name = "Rating";
-            this.Rating.Size = new System.Drawing.Size(100, 22);
-            this.Rating.TabIndex = 8;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -121,14 +101,6 @@
             this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Оцінка";
-            // 
-            // Position
-            // 
-            this.Position.Location = new System.Drawing.Point(33, 186);
-            this.Position.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Position.Name = "Position";
-            this.Position.Size = new System.Drawing.Size(100, 22);
-            this.Position.TabIndex = 10;
             // 
             // label5
             // 
@@ -181,87 +153,60 @@
             this.NameTheacher.Size = new System.Drawing.Size(137, 22);
             this.NameTheacher.TabIndex = 21;
             // 
-            // Nomer
+            // Position
             // 
-            this.Nomer.Location = new System.Drawing.Point(32, 299);
-            this.Nomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Nomer.Name = "Nomer";
-            this.Nomer.Size = new System.Drawing.Size(100, 22);
-            this.Nomer.TabIndex = 23;
+            this.Position.FormattingEnabled = true;
+            this.Position.Items.AddRange(new object[] {
+            " Асистент",
+            " Викладач",
+            " СтаршийВиклдач",
+            " Доцент",
+            " Професор"});
+            this.Position.Location = new System.Drawing.Point(33, 187);
+            this.Position.Name = "Position";
+            this.Position.Size = new System.Drawing.Size(121, 24);
+            this.Position.TabIndex = 22;
             // 
-            // label10
+            // Rating
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 281);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 16);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Номер групи";
+            this.Rating.Location = new System.Drawing.Point(155, 115);
+            this.Rating.Name = "Rating";
+            this.Rating.Size = new System.Drawing.Size(93, 22);
+            this.Rating.TabIndex = 23;
             // 
-            // LastNameStudent
+            // Hours
             // 
-            this.LastNameStudent.Location = new System.Drawing.Point(33, 359);
-            this.LastNameStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.LastNameStudent.Name = "LastNameStudent";
-            this.LastNameStudent.Size = new System.Drawing.Size(137, 22);
-            this.LastNameStudent.TabIndex = 24;
+            this.Hours.Location = new System.Drawing.Point(29, 115);
+            this.Hours.Name = "Hours";
+            this.Hours.Size = new System.Drawing.Size(103, 22);
+            this.Hours.TabIndex = 24;
             // 
-            // NameStudent
-            // 
-            this.NameStudent.Location = new System.Drawing.Point(177, 359);
-            this.NameStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NameStudent.Name = "NameStudent";
-            this.NameStudent.Size = new System.Drawing.Size(137, 22);
-            this.NameStudent.TabIndex = 25;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(173, 340);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 16);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Ім\'я  Студента";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 340);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 16);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Прізвище Студента";
-            // 
-            // Form2
+            // AddExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(367, 450);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.NameStudent);
-            this.Controls.Add(this.LastNameStudent);
-            this.Controls.Add(this.Nomer);
-            this.Controls.Add(this.label10);
+            this.ClientSize = new System.Drawing.Size(367, 355);
+            this.Controls.Add(this.Hours);
+            this.Controls.Add(this.Rating);
+            this.Controls.Add(this.Position);
             this.Controls.Add(this.NameTheacher);
             this.Controls.Add(this.DateProv);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.LastNameTheacher);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Position);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Rating);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Hours);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Predmet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form2";
+            this.Name = "AddExam";
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.Rating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hours)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,22 +218,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Predmet;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Hours;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Rating;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Position;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox LastNameTheacher;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker DateProv;
         private System.Windows.Forms.TextBox NameTheacher;
-        private System.Windows.Forms.TextBox Nomer;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox LastNameStudent;
-        private System.Windows.Forms.TextBox NameStudent;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox Position;
+        private System.Windows.Forms.NumericUpDown Rating;
+        private System.Windows.Forms.NumericUpDown Hours;
     }
 }

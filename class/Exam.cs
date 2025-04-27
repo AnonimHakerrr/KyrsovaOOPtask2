@@ -10,30 +10,50 @@ namespace KyrsovaOOPtask2
 {
     public class Exam
     {
-        private Student stud = new Student();
-        private Theacher thech = new Theacher();
-        public string nameExam { get; private set; }
-        public int hours { get; private set; }
-        public int rating { get; private set; }
-        public DateTime dateTime { get; private set; }
-        public Exam(Student stud,Theacher thech, string nameExam, int hours, int rating, DateTime dateTime)
+        private Teacher _teacher;
+        private string _nameExam { get; set; }
+        private int _hours { get; set; }
+        private int _rating { get; set; }
+        private DateTime _dateTime { get; set; }
+        
+        public Exam( Teacher tech, string nameExam, int hours, int rating, DateTime dateTime)
         {
-            this.stud =  stud;
-            this.thech=thech;
-            this.nameExam = nameExam;
-            this.hours = hours;
-            this.rating = rating;
-            this.dateTime = dateTime;
+            _teacher = tech;
+            _nameExam = nameExam;
+            _hours = hours;
+            _rating = rating;
+            _dateTime = dateTime;
         }
-        public Theacher GetTheacher() { return thech; }
-        public override string ToString()
+        
+        public int rating { get => _rating; set => _rating = value; }
+        public int hours => _hours;
+        public DateTime dateTime => _dateTime;
+        public string nameExam => _nameExam;
+        public Teacher teacher => _teacher;
+        public override bool Equals(object obj)
         {
-            return "1\nЕкзамен з "+nameExam + "\nДата проеведення :  " + 
-                   dateTime.Date.ToString() + "\nВідведення кількість годин: " +
-                   hours + "\nОцінка: " +
-                   rating +
-                   "\n" + thech.Show() +
-                   "\n" + stud.Show();
+            if (obj is Exam other)
+            {
+                return _nameExam == other._nameExam &&
+                       _hours == other._hours &&
+                       _rating == other._rating &&
+                       _dateTime.Date == other._dateTime.Date &&
+                       _teacher.Equals(other._teacher);
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_nameExam, _hours, _rating, _dateTime.Date, _teacher);
+        }
+        public string ToString()
+        {
+            return  " \nЕкзамен з " + _nameExam + "\nДата проеведення :  " +
+                   _dateTime.Date.ToString() + "\nВідведення кількість годин: " +
+                   _hours + "\nОцінка: " +
+                   _rating +
+                   "\n" + _teacher.Show();
         }
         
          
