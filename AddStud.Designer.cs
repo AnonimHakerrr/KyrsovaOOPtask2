@@ -32,9 +32,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.NameStudent = new System.Windows.Forms.TextBox();
             this.LastNameStudent = new System.Windows.Forms.TextBox();
-            this.Nomer = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.listGroup = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label11
@@ -73,15 +73,6 @@
             this.LastNameStudent.TabIndex = 30;
             this.LastNameStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Click_KeyDown);
             // 
-            // Nomer
-            // 
-            this.Nomer.Location = new System.Drawing.Point(18, 68);
-            this.Nomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Nomer.Name = "Nomer";
-            this.Nomer.Size = new System.Drawing.Size(100, 22);
-            this.Nomer.TabIndex = 29;
-            this.Nomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Click_KeyDown);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -102,18 +93,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listGroup
+            // 
+            this.listGroup.FormattingEnabled = true;
+            this.listGroup.Location = new System.Drawing.Point(19, 69);
+            this.listGroup.Name = "listGroup";
+            this.listGroup.Size = new System.Drawing.Size(121, 24);
+            this.listGroup.TabIndex = 35;
+            // 
             // AddStud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 250);
+            this.Controls.Add(this.listGroup);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.NameStudent);
             this.Controls.Add(this.LastNameStudent);
-            this.Controls.Add(this.Nomer);
             this.Controls.Add(this.label10);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "AddStud";
             this.Text = "AddStud";
             this.ResumeLayout(false);
@@ -127,8 +128,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox NameStudent;
         private System.Windows.Forms.TextBox LastNameStudent;
-        private System.Windows.Forms.TextBox Nomer;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox listGroup;
     }
 }

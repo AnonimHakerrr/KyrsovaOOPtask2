@@ -11,9 +11,13 @@ namespace KyrsovaOOPtask2
     public class Exam
     {
         private Teacher _teacher;
+        
         private string _nameExam { get; set; }
+        
         private int _hours { get; set; }
+        
         private int _rating { get; set; }
+        
         private DateTime _dateTime { get; set; }
         
         public Exam( Teacher tech, string nameExam, int hours, int rating, DateTime dateTime)
@@ -25,11 +29,19 @@ namespace KyrsovaOOPtask2
             _dateTime = dateTime;
         }
         
-        public int rating { get => _rating; set => _rating = value; }
+        public int rating {
+            get => _rating; 
+            set => _rating = value;
+        }
+
         public int hours => _hours;
+        
         public DateTime dateTime => _dateTime;
+        
         public string nameExam => _nameExam;
+        
         public Teacher teacher => _teacher;
+        
         public override bool Equals(object obj)
         {
             if (obj is Exam other)
@@ -47,18 +59,14 @@ namespace KyrsovaOOPtask2
         {
             return HashCode.Combine(_nameExam, _hours, _rating, _dateTime.Date, _teacher);
         }
-        public string ToString()
-        {
-            return  " \nЕкзамен з " + _nameExam + "\nДата проеведення :  " +
-                   _dateTime.Date.ToString() + "\nВідведення кількість годин: " +
-                   _hours + "\nОцінка: " +
-                   _rating +
-                   "\n" + _teacher.Show();
-        }
-        
-         
 
-       
-        
+        public override string ToString()
+        {
+            return  $"\nЕкзамен з {_nameExam} " +
+                $"\nДата проеведення : {_dateTime.Date.ToString()}" +
+                $"\nВідведення кількість годин: {_hours} " +
+                $"\nОцінка: {_rating}" +
+                $"\n{_teacher.Show()}";
+        }
     }
 }

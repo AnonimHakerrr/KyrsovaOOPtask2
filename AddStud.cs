@@ -13,23 +13,27 @@ namespace KyrsovaOOPtask2
     public partial class AddStud : Form
     {
         public delegate void StudCreatedHandler(Student exam);
+       
         public event StudCreatedHandler StudCreated;
-        public AddStud()
+        
+        public AddStud(List<Student> listStudents)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            listGroup.Items.AddRange(listStudents.Select(s => s.nomerGrup).Distinct().ToArray());
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (Validation())
             {
-                StudCreated?.Invoke(new Student(Nomer.Text, LastNameStudent.Text, NameStudent.Text));
+                StudCreated?.Invoke(new Student(listGroup.Text, LastNameStudent.Text, NameStudent.Text));
                 this.Close();
             }
         }
         private bool Validation()
         {
-            if (string.IsNullOrWhiteSpace(Nomer.Text) || string.IsNullOrWhiteSpace(LastNameStudent.Text) || string.IsNullOrWhiteSpace(NameStudent.Text))
+            if (string.IsNullOrWhiteSpace(listGroup.Text) || string.IsNullOrWhiteSpace(LastNameStudent.Text) || string.IsNullOrWhiteSpace(NameStudent.Text))
             {
                 MessageBox.Show("Всі поля повинні бути заповнені.");
                 return false;
@@ -39,7 +43,6 @@ namespace KyrsovaOOPtask2
 
         private void Click_KeyDown(object sender, KeyEventArgs e)
         {
-
             if (e.KeyCode == Keys.Enter)
             {
                 button1_Click(sender, e);
@@ -49,5 +52,7 @@ namespace KyrsovaOOPtask2
                 Application.Exit();
             }
         }
+
+       
     }
 }

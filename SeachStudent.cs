@@ -13,7 +13,9 @@ namespace KyrsovaOOPtask2
     public partial class SeachStudent : Form
     {
         public delegate void SeachStudentHandler(string studentInfo);
+        
         public event SeachStudentHandler SeachStudents;
+        
         public SeachStudent()
         {
             InitializeComponent();

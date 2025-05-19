@@ -9,35 +9,39 @@ namespace KyrsovaOOPtask2
 {
     public class RecordBook : IEnumerable<Exam>
     {
-        Exam[] exam;
-        int count;
+        Exam[] _exam;
+        int _count;
 
         public RecordBook(int capacity = 3)
         {
-            exam = new Exam[capacity];
-            count = 0;
+            _exam = new Exam[capacity];
+            _count = 0;
         }
+
+        public Exam[] Exams => _exam;
+
+        public int Count => _count;
 
         public void Add(Exam exam)
         {
             try
             {
-                if (count < this.exam.Length)
+                if (_count < this._exam.Length)
                 {
-                    this.exam[count] = exam;
-                    count++;
+                    this._exam[_count] = exam;
+                    _count++;
                 }
                 else
                 {
-                    int newSize = this.exam.Length * 2;
+                    int newSize = this._exam.Length * 2;
                     Exam[] newArray = new Exam[newSize];
-                    for (int i = 0; i < this.exam.Length; i++)
+                    for (int i = 0; i < this._exam.Length; i++)
                     {
-                        newArray[i] = this.exam[i];
+                        newArray[i] = this._exam[i];
                     }
-                    this.exam = newArray;
-                    this.exam[count] = exam;
-                    count++;
+                    this._exam = newArray;
+                    this._exam[_count] = exam;
+                    _count++;
                 }
             }
             catch (Exception ex)
@@ -45,37 +49,30 @@ namespace KyrsovaOOPtask2
                 Console.WriteLine(ex);
             }
         }
+       
         public void Delete(int index)
         {
-            if (index < count)
+            if (index < _count)
             {
-                Exam[] tempExams = new Exam[count - 1];
+                Exam[] tempExams = new Exam[_count - 1];
                 int j = 0;
-                for (int i = 0; i < count; i++)
+                for (int i = 0; i < _count; i++)
                 {
                     if (i != index)
                     {
-                        tempExams[j++] = exam[i];
+                        tempExams[j++] = _exam[i];
                     }
                 }
-                exam = tempExams;
+                _exam = tempExams;
             }
-            count--;
-        }
-        public Exam[] Exams
-        {
-            get { return exam; }
+            _count--;
         }
 
-        public int Count
-        {
-            get { return count; }
-        }
         public IEnumerator<Exam> GetEnumerator()
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < _count; i++)
             {
-                yield return exam[i];
+                yield return _exam[i];
             }
         }
 

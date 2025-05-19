@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KyrsovaOOPtask2.AddExam">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="KyrsovaOOPtask2.AddExam.ExamCreatedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AddExam.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQCBAgACCAAAACAAIIAAEAgGAQAAAAAAA=</HashCode>
+      <FileName>AddExam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.AddStud">
+    <Position X="8.5" Y="7" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="KyrsovaOOPtask2.AddStud.StudCreatedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AddStud.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>cAAAAAABACgAAAAAACCAACACAAAIAAAAAEAAAQAAEAA=</HashCode>
+      <FileName>AddStud.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Exam">
+    <Position X="10.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAABBAQAAAAAAAEgAAAAAAEJQAAAIAAAAAAAAABAIA=</HashCode>
+      <FileName>class\Exam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Persone">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAABAAAAEAAEAAAAAAAIEAAAAAAAACAAAAAA=</HashCode>
+      <FileName>class\Persone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.RecordBook" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAAAAAAAAQAABEAAAAEAACAAAAgAAA=</HashCode>
+      <FileName>class\RecordBook.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Student">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEgACAAAAAACCEAYAAAAAAAAAQAAA=</HashCode>
+      <FileName>class\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Teacher">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAkgAAAAAAAAAAEAIAAAAAAgAAAAAA=</HashCode>
+      <FileName>class\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Program">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.RecordBooks">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQQwQAMAgSAVSgAIEQCBEAATAABwwAQACWOxCAACogE=</HashCode>
+      <FileName>RecordBooks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.SeachExam">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="KyrsovaOOPtask2.SeachExam.SeachExamHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SeachExam.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACAAABAAAACAAgACAAAIAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>SeachExam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.SeachStudent">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="KyrsovaOOPtask2.SeachStudent.SeachStudentHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SeachStudent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAgACAAAIAAAAEEQAAAAAAAA=</HashCode>
+      <FileName>SeachStudent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Properties.Resources">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaOOPtask2.Properties.Settings">
+    <Position X="4.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="KyrsovaOOPtask2.TeacherPosition">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAABAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>class\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

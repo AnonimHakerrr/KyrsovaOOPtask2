@@ -13,7 +13,9 @@ namespace KyrsovaOOPtask2
     public partial class AddExam : Form
     {
         public delegate void ExamCreatedHandler(Exam exam);
+        
         public event ExamCreatedHandler ExamCreated;
+       
         public AddExam()
         {
             InitializeComponent();

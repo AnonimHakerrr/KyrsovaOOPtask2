@@ -202,7 +202,9 @@
             this.Controls.Add(this.Predmet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "AddExam";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.Rating)).EndInit();
